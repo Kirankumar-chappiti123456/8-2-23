@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char a[]="kirankumar";
+    int l=strlen(a);
+    int i=0,j=0;
+    for(i=0;i<l;i++)
+    {
+        for(j=i+1;j<l;j++)
+        {
+            if(a[i]<a[j])
+            {
+                char temp=a[i];
+                a[i]=a[j];
+                a[j]=temp;
+            }
+        }
+    }
+    printf("%s",a);
+}
