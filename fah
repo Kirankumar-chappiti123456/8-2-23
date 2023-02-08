@@ -1,0 +1,59 @@
+#include<stdio.h>
+enum choice{kiran,raghu,hema,sailu,vijay};
+#define K 32
+#define D 7
+#define PI 3.14
+int main()
+{
+    int choice;
+    printf("enter the choice:");
+    scanf("%d",&choice);
+    float fa=0,cel=0,day,week;
+    int r,c;
+    switch(choice)
+    {
+        case kiran :
+        printf("enter the fahren heat:");
+        scanf("%f",&fa);
+        cel=((fa-K)*5/9);
+        printf("%f",cel);
+        break;
+        
+        
+        case raghu :
+        printf("enter the cel heat:");
+        scanf("%f",&cel);
+        fa=((cel*9/5)+K);
+        printf("%f",fa);
+        break;
+        
+        
+        case hema :
+        printf("enter the no of days:");
+        scanf("%f",&day);
+        week=day/D;
+        printf("%f",week);
+        break;
+        
+        
+        case sailu :
+        printf("enter the weeks:");
+        scanf("%f",&week);
+        day=week*D;
+        printf("%f",day);
+        break;
+        
+        
+        case vijay :
+        printf("enter the radius:");
+        scanf("%d",&r);
+        c=PI*r*r;
+        printf("%d",c);
+        break;
+        
+        
+        default :
+        printf("invlid after 1 t0 5");
+        break;
+    }
+}
